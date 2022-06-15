@@ -1,0 +1,21 @@
+.admin-card{
+    max-width: 300px;
+    margin-bottom: 50px;
+    float: left;
+    height: 270px;
+    width: 350px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #faf3f3;
+}
+
+img
+{
+    width: 120px;
+    margin: auto;
+}
+
+.card-text
+{
+    margin-top: 20px;
+}

@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark bg-primary sticky-top">
+    <div class="container-fluid mx-auto">
+        <a class="navbar-brand mx-auto" href="#">
+          <span class="logo">{{appName}}</span>
+        </a>
+        <button [hidden]="!this.authHelper.adminLogin" mat-raised-button color="primary" style="float: left; position:absolute" (click)="this.authHelper.signOutAdmin()">Logout Admin</button>
+        <button [hidden]="!this.authHelper.isUserLogin" mat-raised-button color="primary" style="float: left; position:absolute" (click)="this.authHelper.SignOut()">Logout User</button>
+
+      </div>
+
+
+
+     
+  </nav>
+
+<router-outlet></router-outlet>
+

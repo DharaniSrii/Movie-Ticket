@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="text-center">
+    <br>
+    <h2>Hello Admin, Welcome to console</h2>
+  </div>
+  <div class="spacer"></div>
+  <br>
+  <mat-card class="admin-card" matRipple (click)="addTheater()">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Add Theater</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../assets/images/add_theater.png" alt="Photo of a Shiba Inu">
+    <mat-card-content class="card-text">
+      <p>
+        <br>
+        Add a Theater with detailed description
+      </p>
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-card class="admin-card" matRipple (click)="addMovie()" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title> Add Movies</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../assets/images/add_movie.png" alt="Photo of a Shiba Inu" width="120px">
+    <mat-card-content class="card-text">
+      <p>
+        Add a Movies with date and time, so that user can book movies based on that
+
+      </p>
+    </mat-card-content>
+    
+  </mat-card>
+  <mat-card class="admin-card" matRipple (click)="viewBookings()">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>View Bookings</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../assets/images/view_bookings.png" alt="Photo of a Shiba Inu">
+    <mat-card-content class="card-text">
+      <p>
+        View Movie bookings from user and you can manage and get full controls from panel
+
+      </p>
+    </mat-card-content>
+    
+  </mat-card>
+  <br>
+</div>
+

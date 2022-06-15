@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+    margin-top: 20px;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #0c6dfd !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #0d6efd !important;
+}
+
+.mat-focused .mat-form-field-label {
+    color: #0d6efd !important;
+}
+
+.loader {
+    width: 20px !important;
+    height: 20px !important;
+}
+.cdk-overlay-container {
+    z-index: 99999999999999; 
+}
+
+.error-snackbar {
+    color:white;
+    background: #F44336 !important;
+    white-space: pre-wrap
+  }
+ .text-wrap
+ {
+    white-space: pre-wrap
+ }
+
+
+
+@media (max-width: 1000px)
+{
+    p{
+        margin-bottom: 0px !important;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

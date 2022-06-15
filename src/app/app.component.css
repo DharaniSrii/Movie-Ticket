@@ -1,0 +1,27 @@
+.logo
+{
+    font-weight: 510;
+    margin-left: 4px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1024px)
+{
+    .navbar
+    {
+        border-bottom-right-radius: 120px;
+        height: 140px;
+    }
+    
+}
+@media (max-width: 1000px)
+{
+    .navbar
+    {
+        border-bottom-right-radius: 110px;
+        height: 135px;
+    }
+}

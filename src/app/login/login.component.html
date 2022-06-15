@@ -1,0 +1,41 @@
+<form [formGroup]="helper.loginForm" (ngSubmit)="onLogin();" autocomplete="off"  #loginFormRef = "ngForm">
+    <div class="container mt-4">
+        <p>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Email Id</mat-label>
+                <input matInput type="email" formControlName="email">
+                <mat-error *ngIf="helper.loginForm.get('email')?.hasError('email')">Enter a valid Email Id</mat-error>
+                <mat-error *ngIf="helper.loginForm.get('email')?.hasError('required')">Email Id is required</mat-error>
+                
+            </mat-form-field>
+        </p> 
+        <p>
+            <mat-form-field appearance="outline"  style="margin-bottom: -0.5em">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" [type]="helper.hideLoginPwd ? 'password' : 'text'">
+                <button mat-icon-button matSuffix type="button" (click)="helper.hideLoginPwd = !helper.hideLoginPwd" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="helper.hideLoginPwd">
+                <mat-icon>{{helper.hideLoginPwd ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="helper.loginForm.get('password')?.hasError('minlength')">Password should contain atleast 6 characters</mat-error>
+                <mat-error *ngIf="helper.loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+            </mat-form-field>
+        </p>
+
+        <br>
+        <div class="text-center" style="margin-top: 9px;">
+            <button mat-raised-button color="primary" *ngIf="loginBtnFlag == 0" class="submit-btn">Login</button>
+            <button mat-raised-button color="primary" *ngIf="loginBtnFlag !== 0" [disabled]="true"  style="color: grey;"><div class="spinner-border text-secondary loader" role="status">
+                <span class="sr-only"></span>
+              </div>&nbsp; Logging in </button>
+        </div>
+        <br>
+        <div class="text-center">
+            <span>Don't have an Account ? </span><a class="hyperlink" (click)="helper.toggle()">Sign up</a>
+        </div>
+        <br>
+        <div class="text-center">
+            <span>Click here to </span><a class="hyperlink" routerLink="/admin">Login as Admin</a>
+        </div>
+    </div>
+</form>

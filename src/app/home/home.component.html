@@ -1,0 +1,23 @@
+<div class="spacer"></div>
+<div class="container">
+        <mat-tab-group mat-align-tabs="center" [(selectedIndex)]="helper.tabIndex" (selectedTabChange)="onTabChange()" mat-stretch-tabs dynamicHeight>
+            <mat-tab label="Login">
+                <div class="spacer"></div>
+                <div class="text-center">
+                    <h2 class="h3">Welcome Back</h2>
+                    <h3 class="h2">Login to continue</h3>
+                </div>
+                <app-login [events]="tabChangeSubject.asObservable()"></app-login>   
+            </mat-tab>
+            <mat-tab label="Sign up"> 
+                <div class="spacer"></div>
+                <div class="text-center">
+                    <h2 class="h3">Let's Get Started</h2>
+                    <h3 class="h2">Create an account with {{appName}}</h3>
+                </div>
+                <app-signup [events]="tabChangeSubject.asObservable()"></app-signup>
+            </mat-tab>
+        </mat-tab-group>
+        <!-- <button (click)="test()">logout</button>
+        <button (click)="backend()">backend</button> -->
+</div>
