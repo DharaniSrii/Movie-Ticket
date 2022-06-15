@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { BackendService } from '../services/backend.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { BackendService } from '../services/backend.service';
 })
 export class TicketBookingComponent implements  AfterViewInit {
   
-  constructor(public backendHelper: BackendService) { 
+  constructor(public backendHelper: BackendService, public router: Router) { 
    
   }
   moviesList:any
@@ -33,6 +34,7 @@ export class TicketBookingComponent implements  AfterViewInit {
 
     onBookNow(data:any)
     {
+      this.router.navigate(['book-movie'])
       console.log(data)
     }
 

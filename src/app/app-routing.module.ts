@@ -4,6 +4,7 @@ import { AdminAddMovieComponent } from './admin-add-movie/admin-add-movie.compon
 import { AdminAddTheaterComponent } from './admin-add-theater/admin-add-theater.component';
 import { AdminControlComponent } from './admin-control/admin-control.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminViewBookingComponent } from './admin-view-booking/admin-view-booking.component';
 import { BookMovieComponent } from './book-movie/book-movie.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'admin-add-theater', component:AdminAddTheaterComponent,  canActivate : [AdminAuthGuardService]},
   {path:'admin-add-movie', component:AdminAddMovieComponent,  canActivate : [AdminAuthGuardService]},
   {path:'ticket-booking', component: TicketBookingComponent,  canActivate : [UserAuthGuardService]},
-  {path:'book-movie', component: BookMovieComponent,  canActivate : [UserAuthGuardService]}
+  {path:'book-movie', component: BookMovieComponent,  canActivate : [UserAuthGuardService]},
+  {path:'admin-view-booking', component:AdminViewBookingComponent,  canActivate : [AdminAuthGuardService]},
 ];
 
 @NgModule({

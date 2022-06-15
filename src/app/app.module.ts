@@ -33,6 +33,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { TicketBookingComponent } from './ticket-booking/ticket-booking.component';
 import { AdminAddMovieComponent } from './admin-add-movie/admin-add-movie.component';
 import { BookMovieComponent } from './book-movie/book-movie.component';
+import { AdminViewBookingComponent } from './admin-view-booking/admin-view-booking.component';
 
 
 
@@ -47,7 +48,8 @@ import { BookMovieComponent } from './book-movie/book-movie.component';
     AdminAddTheaterComponent,
     TicketBookingComponent,
     AdminAddMovieComponent,
-    BookMovieComponent
+    BookMovieComponent,
+    AdminViewBookingComponent
   ],
   imports: [
     BrowserModule,

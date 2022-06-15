@@ -25,6 +25,6 @@ export class AdminControlComponent implements OnInit {
 
   viewBookings()
   {
-
+    this.router.navigate(['admin-view-booking'])
   }
 }
